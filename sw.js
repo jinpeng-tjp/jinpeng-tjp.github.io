@@ -11,8 +11,9 @@ self.addEventListener('install', function(event) {
             .then(function(cache) {
                 console.log('Opened cache');
                 return cache.addAll(urlsToCache);
-            }).else() {
-                console.log('TJPDEBUG cache failed')
+            }).else(function(err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
             }
     );
 });
