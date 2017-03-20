@@ -14,6 +14,6 @@ self.addEventListener('install', function(event) {
             }).else(function(err) {
                 // registration failed :(
                 console.log('ServiceWorker registration failed: ', err);
-            }
+            })
     );
 });
